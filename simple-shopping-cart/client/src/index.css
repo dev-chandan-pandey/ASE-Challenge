@@ -1,0 +1,47 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --muted: #666;
+  --accent: #3b82f6;
+}
+
+* { box-sizing: border-box; font-family: Inter, system-ui, Arial, sans-serif; }
+body { margin: 0; background: var(--bg); color: #111; }
+
+.container { max-width: 1100px; margin: 20px auto; padding: 0 16px; }
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom: 18px; }
+.header h1 { margin: 0; font-size: 1.6rem; }
+.cart-button { background: var(--accent); color: white; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 16px; }
+
+.card { background: var(--card); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; display:flex; flex-direction:column; }
+.card-img { width:100%; height:150px; object-fit:cover; }
+.card-body { padding:12px; display:flex; flex-direction:column; gap:8px; }
+.price { font-weight:700; color: var(--accent); }
+.btn { background: var(--accent); color: #fff; border: none; padding: 8px 10px; border-radius:8px; cursor:pointer; }
+.btn.secondary { background: #eee; color: #333; }
+
+.footer { text-align:center; margin: 28px 0; color: var(--muted); }
+
+.modal-backdrop {
+  position: fixed; inset: 0; display:flex; align-items:center; justify-content:center;
+  background: rgba(0,0,0,0.35); z-index: 50;
+}
+.modal { width: 720px; max-width: 96%; background: white; border-radius: 10px; padding: 18px; box-shadow: 0 10px 40px rgba(0,0,0,0.18); }
+.modal-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.close { background: transparent; border: none; font-size: 20px; cursor:pointer; }
+.cart-list { max-height: 360px; overflow:auto; margin-bottom:12px; }
+.cart-item { display:flex; align-items:center; gap:12px; padding:8px 0; border-bottom: 1px solid #eee; }
+.cart-item img { width:64px; height:48px; object-fit:cover; border-radius:6px; }
+.ci-info { flex:1; }
+.ci-name { font-weight:600; }
+.ci-price { color:var(--muted); font-size:0.9rem; }
+.ci-qty { display:flex; align-items:center; gap:6px; }
+.ci-qty button { width:28px; height:28px; border-radius:6px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+.ci-qty input { width:44px; text-align:center; padding:6px; border-radius:6px; border:1px solid #ddd; }
+.ci-sub { width:80px; text-align:right; font-weight:700; }
+
+.modal-footer { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.total { font-size:1.1rem; font-weight:700; }
+.empty { padding:24px; text-align:center; color:var(--muted); }
