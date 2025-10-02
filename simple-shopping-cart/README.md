@@ -1,5 +1,5 @@
 
-``
+```
 simple-shopping-cart/
 ├─ server/   # Backend - Express API
 │  ├─ index.js
@@ -10,7 +10,7 @@ simple-shopping-cart/
    ├─ index.html
    └─ vite.config.js
 
-``
+```
 
 🚀 Features
 
@@ -40,6 +40,7 @@ Clear cart option.
 
 🛠️ Installation & Running
 Backend
+
 `
 cd server
 npm install
@@ -50,10 +51,8 @@ Run backend tests
 
 `
 npm test
-
 `
 Frontend
-
 `
 cd ../client
 npm install
@@ -61,7 +60,9 @@ npm run dev  http://localhost:5173
 `
 
 🐳 Docker Setup (Optional)
-`docker-compose up --build
+
+`
+docker-compose up --build
 `
 Backend → http://localhost:4000
 
