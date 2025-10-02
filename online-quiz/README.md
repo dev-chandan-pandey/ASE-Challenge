@@ -4,7 +4,7 @@ Project Overview
 A full-stack quiz application where users can attempt a quiz, navigate through questions, and view their final score.
 
 📂 Project Structure
-``
+```
 quiz-app/
 ├─ server/   # Backend - Express + SQLite
 │  ├─ db.js
@@ -16,7 +16,7 @@ quiz-app/
    ├─ index.html
    └─ vite.config.js
 
-``
+```
 🚀 Features
 
 Backend
@@ -51,32 +51,31 @@ Detailed results → correct vs wrong answers.
 Backend
 
     `
-    cd server
+cd server
 npm install
 npm run seed   
-npm start      
+npm start    
     `
 
     Run backend tests
 
- `
-    npm test
+`
+ npm test
 `
 
 
 Frontend
+
 `
 cd ../client
 npm install
 npm run dev  
-
 `
 
 🐳 Docker Setup (Optional)
 
 `
 docker-compose up --build
-
 `
 Backend → http://localhost:4000
 
