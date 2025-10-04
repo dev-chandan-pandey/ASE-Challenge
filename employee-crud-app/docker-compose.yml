@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  server:
+    build: ./server
+    container_name: employee-server
+    ports:
+      - "4002:4002"
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+  client:
+    build: ./client
+    container_name: employee-client
+    ports:
+      - "5173:80"
+    depends_on:
+      - server
