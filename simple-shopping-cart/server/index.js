@@ -5,8 +5,13 @@ const products = require("./products");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+const allowedOrigin = "https://ase-challenge-gv6o.vercel.app";
 
-app.use(cors());
+app.use(cors({
+  origin: allowedOrigin,
+  credentials: true, // if you're using cookies or auth headers
+}));
+
 app.use(express.json());
 
 // GET /products - returns the hardcoded list
