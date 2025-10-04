@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "./components/ProductCard";
 import CartModal from "./components/CartModal";
 
-const BACKEND = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+const BACKEND = import.meta.env.VITE_BACKEND_URL || "https://ase-challenge-1.onrender.com";
 
 export default function App() {
   const [products, setProducts] = useState([]);
