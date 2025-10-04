@@ -9,7 +9,22 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 4001;
 
-app.use(cors());
+const allowedOrigins = [
+  "https://your-frontend-domain.com",
+  "http://localhost:3000", // for local dev
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+}));
+
 app.use(express.json());
 
 // basic health

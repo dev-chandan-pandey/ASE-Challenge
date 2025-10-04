@@ -17,7 +17,7 @@ export default function App() {
         <StartPage
           onStart={ async (selectedQuizId) => {
   try {
-    const res = await fetch(`http://localhost:4001/quiz/${selectedQuizId}/questions`);
+    const res = await fetch(`https://ase-challenge-crjc.onrender.com/quiz/${selectedQuizId}/questions`);
     if (!res.ok) throw new Error(`Failed to fetch quiz questions: ${res.status}`);
     const data = await res.json();
     console.log("Fetched quiz questions:", data);
@@ -44,7 +44,7 @@ export default function App() {
             // transform to array
             const payload = { answers: Object.entries(answersObj).map(([qid, ans]) => ({ questionId: Number(qid), answer: ans })) };
             try {
-              const res = await fetch(`http://localhost:4001/quiz/${quizId}/submit`, {
+              const res = await fetch(`https://ase-challenge-crjc.onrender.com/quiz/${quizId}/submit`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
