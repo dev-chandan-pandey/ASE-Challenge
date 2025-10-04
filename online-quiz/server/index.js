@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 4001;
 
 const allowedOrigins = [
-  "https://your-frontend-domain.com",
+  "https://ase-challenge-omega.vercel.app",
   "http://localhost:3000", // for local dev
 ];
 
