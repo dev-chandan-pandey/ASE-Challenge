@@ -8,7 +8,13 @@ const path = require("path");
 const PORT = process.env.PORT || 4002;
 const app = express();
 
-app.use(cors());
+const allowedOrigin = "https://ase-challenge-k78l.vercel.app";
+
+app.use(cors({
+  origin: allowedOrigin,
+  credentials: true, // if you're using cookies or auth headers
+}));
+
 app.use(express.json());
 
 // Ensure schema exists on start

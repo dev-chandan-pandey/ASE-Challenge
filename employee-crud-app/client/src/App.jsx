@@ -3,7 +3,7 @@ import { api } from "./services/api";
 import EmployeeTable from "./components/EmployeeTable";
 import EmployeeForm from "./components/EmployeeForm";
 import EditModal from "./components/EditModal";
-
+const API_BASE = import.meta.env.VITE_API_URL 
 export default function App() {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -128,7 +128,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="footer">Backend: <code>http://localhost:4002</code></footer>
+      <footer className="footer">Backend: <code>`${API_BASE}`</code></footer>
 
       <EditModal open={!!editing} onClose={() => setEditing(null)} title="Edit Employee">
         {editing && (
